@@ -1,0 +1,28 @@
+`timescale 1ns / 1ps
+module tb_RAM;
+    reg clk, we, re;
+    reg [3:0] addr;
+    reg [7:0] din;
+    wire [7:0] dout;
+    RAM #(.DATA_WIDTH(8), .ADDR_WIDTH(4), .MEM_DEPTH(16)) uut (
+        .clk(clk), .we(we), .re(re),
+        .addr(addr), .din(din), .dout(dout)
+    );
+    always #5 clk = ~clk;
+    initial begin
+        clk = 0; we = 0; re = 0; addr = 0; din = 0;
+        we = 1;
+        addr = 4'h0; din = 8'hAA; #10;
+        addr = 4'h1; din = 8'hBB; #10;
+        addr = 4'h2; din = 8'hCC; #10;
+        addr = 4'h3; din = 8'hDD; #10;
+        we = 0;
+        re = 1;
+        addr = 4'h0; #10;
+        addr = 4'h1; #10;
+        addr = 4'h2; #10;
+        addr = 4'h3; #10;
+        re = 0;
+        #10 $finish;
+    end
+endmodule
