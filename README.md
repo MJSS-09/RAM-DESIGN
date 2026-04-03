@@ -38,6 +38,11 @@ RTL & Implementation: Confirmed — synthesised netlist correctly maps to LUTRAM
 
 The use of LUTRAM (distributed memory within LUTs) rather than block RAM (BRAM) is appropriate for this small memory depth, and the Artix-7's 46,200 available LUTRAM entries make it an ideal platform for this task.
 
+FUTURE EXTENSIONS
+
+RAM: Extend to dual-port RAM, larger BRAM-based depths, byte-enable write strobes.
+
+
 #OUTPUT
 
 <img width="1552" height="363" alt="Image" src="https://github.com/user-attachments/assets/c860f38d-15d4-4021-88b4-6baad11860bb" />
