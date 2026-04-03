@@ -40,6 +40,8 @@ The use of LUTRAM (distributed memory within LUTs) rather than block RAM (BRAM) 
 
 #OUTPUT
 
+<img width="1552" height="363" alt="Image" src="https://github.com/user-attachments/assets/c860f38d-15d4-4021-88b4-6baad11860bb" />
+
 
 
 
