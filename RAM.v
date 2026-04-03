@@ -8,7 +8,7 @@ module RAM #(
     input  wire                  we,
     input  wire                  re,
     input  wire [ADDR_WIDTH-1:0] addr,
-    input  wire [DATA_WIDTH-1:0] din,
+    input  wire [DATA_WIDTH-1:0] din, 
     output reg  [DATA_WIDTH-1:0] dout
 );
     // Memory array
